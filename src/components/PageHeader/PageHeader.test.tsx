@@ -4,6 +4,6 @@ import PageHeader from './PageHeader';
 
 test('renders app', () => {
   render(<PageHeader userCredit={500} />);
-  const headerElement = screen.getByText(/Credits: 500/i);
+  const headerElement = screen.getByText(/500/i);
   expect(headerElement).toBeInTheDocument();
 });

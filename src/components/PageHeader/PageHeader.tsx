@@ -10,7 +10,7 @@ export default function PageHeader({ userCredit }: Props) {
     <header className="page-header">
       <p className="page-header__credits-status">
         Credits:
-        <span className="page-header__credits-value">{userCredit}</span>
+        <span className="page-header__credits-value">{userCredit.toLocaleString('de-DE')}</span>
       </p>
     </header>
   );

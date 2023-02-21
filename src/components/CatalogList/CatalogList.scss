@@ -2,5 +2,11 @@
   padding: 8px;
   display: flex;
   flex-wrap: wrap;
-  width: 80vw;
+  width: 100vw;
+  margin-bottom: 100px; // Account for cart placement below list
+
+  @media screen and (min-width:1024px) {
+    width: 80vw;
+    margin-bottom: 0;
+  }
 }

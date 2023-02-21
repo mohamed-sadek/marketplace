@@ -3,8 +3,16 @@
 .catalog-item {
   margin: 8px;
   padding: 8px;
-  flex-basis: 20%;
+  flex-basis: 100%;
   border: 1px solid #334652;
+
+  @media screen and (min-width:768px) {
+    flex-basis: 45%;
+  }
+
+  @media screen and (min-width:1024px) {
+    flex-basis: 20%;
+  }
 
   &__title {
     margin: 0;

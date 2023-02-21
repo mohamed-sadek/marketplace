@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     try {
-      fetch('http://localhost:3000/catalog/list').then((result) => {
+      fetch('/catalog/list').then((result) => {
         result.json().then((jsonResults) => {
           setCatalogItems(jsonResults);
           resetMessaging();

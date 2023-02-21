@@ -10,7 +10,7 @@ interface Props {
 
 export default function CatalogList({ catalogItems, handleAddToCart }: Props) {
   return (
-    <section className="catalog-list">
+    <section className="catalog-list" data-testid="catalog-list">
       {catalogItems.map(
         (item: iCatalogItem) => (
           <CatalogItem

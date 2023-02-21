@@ -1,13 +1,24 @@
 .cart-container {
   background-color: #bcbbbb;
   position: fixed;
-  top: 66px;
-  right: 16px;
+  bottom: 0;
+  right: 0;
+  left: 0;
   z-index: 0;
   flex-grow: 1;
   flex-shrink: 0;
-  width: 20vw;
-  padding: 8px;
+  width: 100%;
+  padding-bottom: 8px;
+  
+
+  @media screen and (min-width:1024px) {
+    bottom: auto;
+    top: 66px;
+    right: 16px;
+    left: auto;
+    width: 20vw;
+    padding: 8px;
+  }
 
   &__cart-list {
     max-height: 400px;
