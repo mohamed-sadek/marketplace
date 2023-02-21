@@ -1,4 +1,4 @@
-ara# Up42 Marketplace
+# Up42 Marketplace
 A simple single page application for displaying and purchasing items using credit.
 
 ## Technology Decisions
