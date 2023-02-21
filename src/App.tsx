@@ -21,10 +21,9 @@ function App() {
 
   useEffect(() => {
     try {
-      fetch('/catalog/list').then((result) => {
+      fetch('http://localhost:3000/catalog/list').then((result) => {
         result.json().then((jsonResults) => {
           setCatalogItems(jsonResults);
-
           resetMessaging();
         });
       });
@@ -38,11 +37,10 @@ function App() {
   }, []);
 
   function getCartTotal(items: iCatalogItem[]): number {
-    let total = 0;
-
-    items.forEach((item: iCatalogItem) => {
-      total += item.price;
-    });
+    const total = items.reduce(
+      (accumulator, item) => accumulator + item.price,
+      0,
+    );
 
     return total;
   }

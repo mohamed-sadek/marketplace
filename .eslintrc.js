@@ -19,10 +19,13 @@ module.exports = {
   },
   plugins: [
     'react',
+    "@typescript-eslint",
   ],
   rules: {
     indent: ['error', 2],
     'react/jsx-filename-extension': [2, { 'extensions': ['.js', '.jsx', '.ts', '.tsx'] }],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
     "import/no-unresolved": "off",
     "import/extensions": "off",
     "react/jsx-no-bind": "off",
