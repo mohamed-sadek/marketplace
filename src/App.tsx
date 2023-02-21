@@ -7,7 +7,7 @@ import { iCatalogItem, iUserCart, iMessaging } from './types';
 
 function App() {
   const [catalogItems, setCatalogItems] = useState<iCatalogItem[]>([]);
-  const [userCredit, setUserCredit] = useState<number>(1);
+  const [userCredit, setUserCredit] = useState<number>(10000);
   const [userCart, setUserCart] = useState<iUserCart>({ items: [], total: 0 });
   const [messaging, setMessaging] = useState<iMessaging>({ status: 'loading', message: '', active: false });
 
@@ -21,13 +21,13 @@ function App() {
 
   useEffect(() => {
     try {
-      fetch('http://localhost:3005/catalog/list').then((result) => {
+      fetch('/catalog/list').then((result) => {
         result.json().then((jsonResults) => {
           setCatalogItems(jsonResults);
+
+          resetMessaging();
         });
       });
-
-      resetMessaging();
     } catch (error) {
       setMessaging({
         status: 'error',
