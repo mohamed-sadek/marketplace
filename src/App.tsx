@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     try {
-      fetch('/catalog/list').then((result) => {
+      fetch('/.netlify/functions/proxy').then((result) => {
         result.json().then((jsonResults) => {
           setCatalogItems(jsonResults);
           resetMessaging();
