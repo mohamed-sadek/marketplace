@@ -1,0 +1,29 @@
+@use "../../globals.scss";
+
+.catalog-item {
+  margin: 8px;
+  padding: 8px;
+  flex-basis: 20%;
+  border: 1px solid #334652;
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    max-width: 90%;
+    min-height: 90px;
+  }
+
+  &__price-label {
+    padding-left: 4px;
+  }
+
+  &__add-to-cart-btn {
+    @extend .btn;
+
+    background: #62d2f8;
+
+    &:hover {
+      background-color: #339ec2;
+    }
+  }
+}

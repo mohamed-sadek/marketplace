@@ -1,0 +1,36 @@
+.cart-container {
+  background-color: #bcbbbb;
+  position: fixed;
+  top: 66px;
+  right: 16px;
+  z-index: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 20vw;
+  padding: 8px;
+
+  &__cart-list {
+    max-height: 400px;
+    overflow: scroll;
+  }
+
+  &__message {
+    display: block;
+    color: white;
+    padding: 4px 4px 4px 8px;
+
+    &--error {
+      background: #e92020;
+    }
+
+    &--success {
+      background: #055c05;
+    }
+  }
+
+  &__title {
+    border-bottom: 1px solid black;
+    padding: 8px;
+    margin: 0;
+  }
+}

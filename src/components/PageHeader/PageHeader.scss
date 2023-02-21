@@ -1,0 +1,22 @@
+.page-header {
+    background: rgb(51, 70, 82);
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    height: 50px;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    &__credits-status {
+        text-align: right;
+        color: white;
+        padding: 16px;
+        margin: 0;
+        line-height: 16px;
+    }
+
+    &__credits-value {
+        padding-left: 4px;
+    }
+}
