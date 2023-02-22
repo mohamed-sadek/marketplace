@@ -1,4 +1,4 @@
-# Up42 Marketplace
+# Marketplace
 A simple single page application for displaying and purchasing items using credit.
 
 ## How to run the project locally (Node and NPM required)
