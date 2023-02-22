@@ -4,6 +4,7 @@ import './App.scss';
 import CatalogList from './components/CatalogList/CatalogList';
 import CartContainer from './components/CartContainer/CartContainer';
 import { iCatalogItem, iUserCart, iMessaging } from '../../types';
+import LoaderIndicator from '../../components/LoadingIndicator/LoadingIndicator';
 
 function App() {
   const [catalogItems, setCatalogItems] = useState<iCatalogItem[]>([]);
@@ -21,7 +22,7 @@ function App() {
 
   useEffect(() => {
     try {
-      fetch('/catalog/list').then((result) => {
+      fetch('http://localhost:3000/catalog/list').then((result) => {
         result.json().then((jsonResults) => {
           setCatalogItems(jsonResults);
           resetMessaging();
@@ -125,7 +126,11 @@ function App() {
   return (
     <div className="app">
       <PageHeader userCredit={userCredit} />
-      {messaging.status === 'loading' && <span className="app__loader">Loading...</span>}
+      {messaging.status === 'loading' && (
+        <span className="app__loader">
+          <LoaderIndicator />
+        </span>
+      )}
       {(!!catalogItems.length && messaging.status !== 'loading'
       && (
         <section className="app__catalog-cart-container">
