@@ -1,0 +1,42 @@
+@use "../../../../globals.scss";
+
+.catalog-item {
+  margin: 8px;
+  padding: 8px;
+  flex-basis: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.5s ease;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+  }
+
+  @media screen and (min-width:768px) {
+    flex-basis: 45%;
+  }
+
+  @media screen and (min-width:1024px) {
+    flex-basis: 20%;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    max-width: 90%;
+    min-height: 90px;
+  }
+
+  &__price-label {
+    padding-left: 4px;
+  }
+
+  &__add-to-cart-btn {
+    @extend .btn;
+
+    background: #62d2f8;
+
+    &:hover {
+      background-color: #339ec2;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../../../globals.scss";
+
+.checkout-widget {
+  padding: 0 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__total-title {
+    padding-left: 4px;
+  }
+
+  &__buy-now-btn {
+    @extend .btn;
+
+    background-color: #1f771f;
+    flex-basis: 100%;
+
+    &:hover {
+      background-color: #245c24;
+    }
+  }
+}
