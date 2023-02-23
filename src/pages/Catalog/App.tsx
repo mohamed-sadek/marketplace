@@ -37,6 +37,18 @@ function App() {
     }
   }, []);
 
+  function getPurchasableItems(): iCatalogItem[] {
+    const cartItemIds = userCart.items.map((item: iCatalogItem) => item.id);
+    const purchasableItems = catalogItems.map(
+      (item: iCatalogItem) => ({
+        ...item,
+        purchasable: !cartItemIds.includes(item.id),
+      }),
+    );
+
+    return purchasableItems;
+  }
+
   function getCartTotal(items: iCatalogItem[]): number {
     const total = items.reduce(
       (accumulator, item) => accumulator + item.price,
@@ -134,7 +146,7 @@ function App() {
       {(!!catalogItems.length && messaging.status !== 'loading'
       && (
         <section className="app__catalog-cart-container">
-          <CatalogList catalogItems={catalogItems} handleAddToCart={onAddCartItem} />
+          <CatalogList catalogItems={getPurchasableItems()} handleAddToCart={onAddCartItem} />
           <CartContainer
             userCart={userCart}
             handleRemoveFromCart={onRemoveCartItem}

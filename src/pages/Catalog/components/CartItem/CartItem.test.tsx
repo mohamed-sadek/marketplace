@@ -7,6 +7,7 @@ test('renders app', () => {
     title: 'ITEM_TITLE',
     price: 50,
     id: "1",
+    purchasable: true,
   };
   render(<CartItem item={item} onRemoveItem={() => {}} />);
   const cartItemElement = screen.getByText(/ITEM_TITLE/i);

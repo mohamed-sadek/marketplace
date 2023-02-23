@@ -41,7 +41,7 @@ While my experience is mainly in Vue.js, I chose React since that is the technol
 
 
 ## Open Questions
-- Can a user add the same item to the cart multiple times? (Currently this is allowed but removing one of the items removes all of them)
+- Can a user add the same item to the cart multiple times? (Currently not allowed)
 - Should we disable the ability to add an item to cart if a user doesn't have enough credits?
 
 

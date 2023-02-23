@@ -15,7 +15,15 @@ export default function CatalogItem({ item, handleAddToCart }: Props) {
         {item.price}
         <span className="catalog-item__price-label">Credits</span>
       </p>
-      <button type="button" className="catalog-item__add-to-cart-btn" onClick={() => handleAddToCart(item.id)}>Add to cart</button>
+      <button
+        disabled={!item.purchasable}
+        type="button"
+        className="catalog-item__add-to-cart-btn"
+        onClick={() => handleAddToCart(item.id)}
+      >
+        Add to cart
+
+      </button>
     </article>
   );
 }

@@ -2,6 +2,7 @@ export interface iCatalogItem {
     title: string,
     price: number,
     id: string,
+    purchasable: boolean,
 }
 
 export interface iUserCart {
